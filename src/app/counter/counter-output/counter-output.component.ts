@@ -8,12 +8,8 @@ import { CounterState } from '../state/counter.state';
   templateUrl: './counter-output.component.html',
   styleUrls: ['./counter-output.component.css']
 })
-export class CounterOutputComponent implements OnInit,OnDestroy{
+export class CounterOutputComponent implements OnInit{
 
-  // @Input() counter;
-  // counter:number;
-
-  // counterSubscription:Subscription
 
   //other way
   counter$:Observable<{counter:number}>
@@ -28,19 +24,8 @@ export class CounterOutputComponent implements OnInit,OnDestroy{
      * Have to show counter's current value in html so fetch data from
      * store
      */
-
-    // this.counterSubscription=this.store.select('counter').subscribe(data => {
-    //   this.counter=data.counter;
-    // })
-
-    //other way
     this.counter$=this.store.select('counter')
   }
 
-  ngOnDestroy(){
-    // if(this.counterSubscription){
-    //   this.counterSubscription.unsubscribe();
-    // }
-  }
 
 }
