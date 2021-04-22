@@ -7,24 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CounterComponent implements OnInit {
 
-  // All commented lines not needed after add ngrx
-  // counter:number=0;
+ 
 
   constructor() { }
 
   ngOnInit() {
   }
-
-  // onIncrement(){
-  //    this.counter++;
-  // }
-
-  // onDecrement(){
-  //    this.counter--;
-  // }
-
-  // onReset(){
-  //     this.counter=0;
-  // }
 
 }

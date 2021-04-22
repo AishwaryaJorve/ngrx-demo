@@ -8,7 +8,7 @@ import { CounterState } from '../state/counter.state';
   templateUrl: './counter-output.component.html',
   styleUrls: ['./counter-output.component.css']
 })
-export class CounterOutputComponent implements OnInit{
+export class CounterOutputComponent implements OnInit {
 
 
   //other way
