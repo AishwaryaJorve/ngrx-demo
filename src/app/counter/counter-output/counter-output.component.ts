@@ -1,6 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { Observable, Subscription } from "rxjs";
+import { getCounter } from "../state/counter.selectors";
 import { CounterState } from "../state/counter.state";
 
 @Component({
@@ -9,7 +10,7 @@ import { CounterState } from "../state/counter.state";
   styleUrls: ["./counter-output.component.css"],
 })
 export class CounterOutputComponent implements OnInit {
-  counter: number;
+  counter$: Observable<number>;
 
   // here CounterState is interface
   constructor(private store: Store<{ counter: CounterState }>) {}
@@ -20,9 +21,6 @@ export class CounterOutputComponent implements OnInit {
      * Have to show counter's current value in html so fetch data from
      * store
      */
-    this.store.select("counter").subscribe((data) => {
-      console.log("counter observable called");
-      this.counter = data.counter;
-    });
+    this.counter$ = this.store.select(getCounter);
   }
 }
