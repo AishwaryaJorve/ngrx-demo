@@ -1,5 +1,11 @@
 import { createReducer, on } from "@ngrx/store";
-import { customIncrement, decrement, increment,reset } from "./counter.action";
+import {
+  customIncrement,
+  decrement,
+  increment,
+  reset,
+  changeChannelName,
+} from "./counter.action";
 import { initialState } from "./counter.state";
 
 const _counterReducer = createReducer(
@@ -22,13 +28,19 @@ const _counterReducer = createReducer(
       counter: 0,
     };
   }),
-  on(customIncrement, (state, action)=>{
+  on(customIncrement, (state, action) => {
     console.log(action);
-    return{
+    return {
       ...state,
-      counter:state.counter+action.value,
-    }
+      counter: state.counter + action.value,
+    };
   }),
+  on(changeChannelName, (state) => {
+    return {
+      ...state,
+      channelName: "Modified Aishwarya dev",
+    };
+  })
 );
 
 export function counterReducer(state, action) {

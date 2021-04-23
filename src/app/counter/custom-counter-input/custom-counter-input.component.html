@@ -1,4 +1,11 @@
 <div>
-  <input type="text" placeholder="Enter value" [(ngModel)]="value">
-  <button class="btn btn-primary" (click)="onAdd()">Add to counter</button>
+  <div class="my-3">
+    {{channelName}}
+  </div>
+  <input type="text" placeholder="Enter value" [(ngModel)]="value">&nbsp;
+  <button class="btn btn-secondary" (click)="onAdd()">Add to counter</button>
+</div>
+<br>
+<div>
+  <button class="btn btn-success" (click)="onChangeChannelName()">change Channel Name</button>
 </div>
