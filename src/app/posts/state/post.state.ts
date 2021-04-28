@@ -12,8 +12,8 @@ export const initialState: PostState = {
       description: "sample description 1",
     },
     {
-      id: "1",
-      title: "sample title 1",
+      id: "2",
+      title: "sample title 2",
       description: "sample description 2",
     },
   ],
