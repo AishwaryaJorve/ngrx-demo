@@ -5,10 +5,11 @@
       <h3>Update Post</h3>
       <hr />
 
-      <form [formGroup]="postForm">
+      <form [formGroup]="postForm" (ngSubmit)="onUpdate()">
         <div class="mb-3">
           <label>Title</label>
           <input type="text" class="form-control" formControlName="title" />
+          <div>{{showTitleErrors()}}</div>
         </div>
         <div class="mb-3">
           <label>Description</label>
@@ -16,6 +17,7 @@
             class="form-control"
             formControlName="description"
           ></textarea>
+          <div>{{ showDescriptionErrors() }}</div>
         </div>
 
         <div class="my-3">
