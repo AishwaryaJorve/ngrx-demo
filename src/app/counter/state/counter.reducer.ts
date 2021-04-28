@@ -28,6 +28,10 @@ const _counterReducer = createReducer(
       counter: 0,
     };
   }),
+
+  /**
+   * when we pass any props with action then we can use this value like (action.value)
+   */
   on(customIncrement, (state, action) => {
     console.log(action);
     return {

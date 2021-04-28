@@ -36,7 +36,7 @@ import { AddPostComponent } from "./posts/add-post/add-post.component";
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    StoreModule.forRoot(appReducer),
+    StoreModule.forRoot(appReducer), //appReducer is main state contain all sub state
     StoreDevtoolsModule.instrument({
       logOnly: environment.production, // Restrict extension to log-only mode
     }),

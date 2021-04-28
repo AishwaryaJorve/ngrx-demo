@@ -11,7 +11,7 @@ import { CounterState } from "../state/counter.state";
 })
 export class CounterButtonsComponent implements OnInit {
   /**
-   * Here is CounterState is an interface
+   * AppState contain substates
    * @param store
    */
   constructor(private store: Store<AppState>) {}
