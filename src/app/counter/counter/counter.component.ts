@@ -13,6 +13,7 @@ export class CounterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("testing git credential");
   }
 
   // onIncrement(){
