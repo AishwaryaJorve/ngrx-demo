@@ -14,6 +14,7 @@ export class CounterComponent implements OnInit {
 
   ngOnInit() {
     console.log("testing git credential");
+
   }
 
   // onIncrement(){
